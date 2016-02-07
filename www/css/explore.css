@@ -1,0 +1,109 @@
+#connect{
+  width: 100%;
+  height: 6%;
+  background-color: rgb(235, 235, 235);
+}
+
+.connectDiv{
+  width: 10%;
+  height: 100%;
+  margin-left: 10%;
+  float: left;
+}
+
+#fb{
+  margin-left: 5%;
+  float: left;
+}
+
+.connectIconImage{
+  margin-top: 15%;
+  margin-left: 15%;
+  width: 70%;
+  height: 70%;
+}
+
+.programAreas{
+  width: 100%;
+  height: auto;
+}
+
+.programArea{
+  height: 100%;
+  background-size: 100% 100%;
+  color: white;
+  line-height: 150%;
+  font-weight: bold;
+  margin-left: 2vw;
+  }
+
+#technology{
+  height: 30vw;
+  background-image: url('../images/companyProfile/explore/engineering.png');
+  font-size: 10vw;
+}
+
+#investmentManagement{
+  height: 30vw;
+  background-image: url('../images/companyProfile/explore/investmentManagement.png');
+  font-size: 10vw;
+}
+
+#operations{
+  height: 30vw;
+  background-image: url('../images/companyProfile/explore/operations.png');
+  font-size: 10vw;
+}
+
+#finance{
+  height: 30vw;
+  background-image: url('../images/companyProfile/explore/finance.png');
+  font-size: 10vw;
+}
+
+#audit{
+  height: 30vw;
+  background-image: url('../images/companyProfile/explore/pr.png');
+  font-size: 10vw;
+}
+
+#legal{
+  height: 30vw;
+  background-image: url('../images/companyProfile/explore/hr.png');
+  font-size: 10vw;
+}
+
+#viewAll{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 100%;
+  border-bottom: 7px solid black;
+  color: black;
+  background-color: rgb(235, 235, 235);
+}
+
+#quotes{
+  width: 100%;
+  background-size: 100% 100%;
+  height: 30%;
+  border-bottom: 7px solid black;
+}
+
+#benefitsAndRewards{
+  width: 100%;
+  background-size: 100% 100%;
+  height: 25%;
+  background-image: url('../images/companyProfile/explore/rewards.png');
+  color: white;
+  text-align: center;
+  font-size: 7vw;
+}
+
+#whyChoose{
+  float: left;
+  margin-left: 22%;
+  margin-top: 10%;
+  color: black;
+}

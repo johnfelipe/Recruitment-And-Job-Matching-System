@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Test test test</h1>
-            <p>Lorem ipsum doler sit amet</p>
-            <img src="img/Illuminati.png" height="100%" width="40%" alt="Illuminati">
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/loginRegister.css">
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/splashscreen.js"></script>
+  <script type="text/javascript" src="js/registrationValidation.js"></script>
+  <script type="text/javascript" src="js/loginValidation.js"></script>
+  <script type="text/javascript" src="js/registerUser.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/forgottenPassword.js"></script>
+  <script type="text/javascript" src="js/appCustomisation.js"></script>
+  <title>Login/Register</title>
+</head>
+<body>
+  <section id="loginPg" class="">
+    <div id="companyLogo"><img src="images/companyLogo.png" alt="Company Logo" id="companyLogoImage" ></div>
+    <div id="jobMatchingText">Job Matching</div>
+    <div class="clear"></div>
+    <div id="forgottenPasswordDiv">
+      <div id="passwordsHeading">Forgotten Password</div>
+      <p>
+        Sorry to hear that you have forgotten your password. Please enter your email
+        address below and we will send you a link to reset it.
+      </p>
+      <input id="forgottenPasswordsEmail" placeholder="email address"><br>
+      <button id="okButton"  class="splashScreenButtons">OK</button>
+      <button id="CancelButton"  class="splashScreenButtons">Cancel</button>
+      <p id="forgottenPasswordsFeedbackLogin"></p>
+    </div>
+    <div class="clear"></div>
+    <input type="text" class="loginFields" id="email" name="email" placeholder="email address" tabindex="0">
+    <input type="password" class="loginFields" id="password" name="password" placeholder="password" tabindex="1">
+    <button id="login"  class="splashScreenButtons" tabindex="2" type="submit">Login</button>
+    <button id="register"  class="splashScreenButtons" tabindex="2" type="submit">Register</button>
+    <p id="ForgotPassword">Forgot Password?</p>
+    <p id="errorFeedbackLogin"></p>
+    <div class="clear"></div>
+  </section>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+  <section id="registerPg" class="noDisplay">
+    <div id="companyLogo"><img src="images/companyLogo.png" alt="Company Logo" id="companyLogoImage" ></div>
+    <div id="jobMatchingText">Job Matching</div>
+    <div class="clear"></div>
+    <input type="text" id="emailReg" name="email" placeholder="e.g. email@host.com">
+    <img src="images/transparent.png" alt="Transparent" id="transparentEmail" >
+    <div class="clear"></div>
+    <input type="text" id="confirmEmail" name="confirmEmail" placeholder="confirm email">
+    <img src="images/transparent.png" alt="Transparent" id="transparentConfirmEmail" >
+    <div class="clear"></div>
+    <input type="password" id="passwd" name="passwd" placeholder="password">
+    <img src="images/transparent.png" alt="Transparent" id="transparentPassword" >
+    <div class="clear"></div>
+    <button id="confirmRegistration" class="splashScreenButtons" type="submit">Create Account</button>
+    <button id="cancel" class="splashScreenButtons" >Cancel</button>
+    <p id="errorFeedback"></p>
+  </section>
+
+</body>
 </html>

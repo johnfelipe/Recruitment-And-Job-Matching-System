@@ -1,0 +1,229 @@
+html, body{
+  background: url('../images/splashScreenBackground.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Login
+*/
+#companyLogo{
+  margin-top: 20%;
+  margin-left: 5%;
+  margin-right: 15%;
+  width: 80%;
+  height: 20%;
+}
+
+#companyLogoImage{
+  width: 100%;
+  width: 100%;
+}
+
+#jobMatchingText{
+  margin-top: 5%;
+  margin-left: 40%;
+  float: left;
+  font-family: sans-serif;
+  font-size: 175%;
+}
+
+#email{
+  margin-left: 15%;
+  width: 70%;
+  height: 7%;
+  margin-top: 10%;
+  float: left;
+}
+
+#password{
+  margin-left: 15%;
+  margin-top: 4%;
+  width: 70%;
+  height: 7%;
+  float: left;
+}
+
+#forgottenPasswordDiv{
+  width: 80%;
+  position: absolute;
+  float: left;
+  margin-left: 10%;
+  height: 45%;
+  background-color: rgb(235, 235, 235);
+  z-index: 1000;
+  border: 2px solid black;
+  padding: 5%;
+}
+
+#passwordsHeading{
+  font-size: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#forgottenPasswordsEmail{
+  width: 100%;
+}
+
+#okButton{
+  margin-top: 5%;
+  background-color: rgb(50, 78, 196);
+}
+
+#CancelButton{
+  margin-top: 5%;
+  background-color: rgb(50, 78, 196);
+}
+
+#forgottenPasswordsFeedbackLogin{
+  color: #ff0000;
+}
+
+/*Login and registration buttons placed on the home screen*/
+.splashScreenButtons{
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  border-radius: 5%;
+  font-family: sans-serif;
+  font-size: 150%;
+}
+
+#login{
+  margin-top: 30%;
+  margin-left: 25%;
+  width: 50%;
+  height: 7%;
+  background-color: rgb(50, 78, 196);
+  float: left;
+  color: rgb(255, 255, 255);
+  border: none; /*Remove default border from submit button*/
+}
+
+#register{
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  height: 7%;
+  background-color: rgb(50, 78, 196);
+  float: left;
+  color: rgb(255, 255, 255);
+  border: none; /*Remove default border from submit button*/
+}
+
+#ForgotPassword{
+  color: rgb(50, 78, 196);
+  float: left;
+  font-size: 100%;
+  margin-top: 5%;
+  margin-left: 35%;
+}
+
+#errorFeedbackLogin{
+  margin-left: 15%;
+  width: 70%;
+  height: 5%;
+  margin-top: -2%;
+  visibility: visible;
+  float: left;
+  font-family: sans-serif;
+  font-size: 90%;
+  color: #ff0000;
+}
+
+
+/*
+Registration
+*/
+.noDisplay{
+  display: none;
+}
+
+#emailReg{
+  margin-top: 10%;
+  margin-left: 15%;
+  width: 70%;
+  height: 7%;
+  float: left;
+}
+
+
+
+#transparentEmail{
+  margin-left: 5%;
+  margin-top: 10%;
+  visibility: visible;
+  float: left;
+}
+
+
+#confirmEmail{
+  margin-left: 15%;
+  width: 70%;
+  height: 7%;
+  margin-top: 4%;
+  float: left;
+}
+
+#passwd{
+  margin-left: 15%;
+  width: 70%;
+  height: 7%;
+  margin-top: 4%;
+  float: left;
+}
+
+#transparentConfirmEmail{
+  margin-left: 5%;
+  margin-top: 4%;
+  visibility: visible;
+  float: left;
+}
+
+#transparentPassword{
+  margin-top: 4%;
+  margin-left: 5%;
+  visibility: visible;
+  float: left;
+}
+
+#confirmRegistration{
+  margin-top: 20%;
+  margin-left: 25%;
+  width: 50%;
+  height: 7%;
+  background-color: rgb(50, 78, 196);
+  float: left;
+  color: rgb(255, 255, 255);
+  border: none; /*Remove default border from submit button*/
+}
+
+#cancel{
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  height: 7%;
+  background-color: rgb(50, 78, 196);
+  float: left;
+  color: rgb(255, 255, 255);
+  border: none; /*Remove default border from submit button*/
+}
+
+
+#errorFeedback{
+  margin-left: 15%;
+  width: 70%;
+  height: 7%;
+  margin-top: 2%;
+  visibility: visible;
+  float: left;
+  font-family: sans-serif;
+  font-size: 100%;
+  color: #ff0000;
+}

@@ -1,0 +1,108 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#header2{
+  width: 100%;
+  height: 8%;
+  background-color: rgba(0, 33, 117, 0.46);
+}
+
+#backIcon{
+  visibility: hidden;
+}
+
+/*#moreMenu{
+  position: absolute;
+  float: left;
+  width: 30%;
+  height: 20%;
+  background-color: white;
+  margin-left: 68%;
+}
+
+.moreMenuOption{
+  width: 100%;
+  height: 50%;
+  padding-left: 10%;
+  font-size: 5vw;
+  color: black;
+  padding-top: 15%;
+}*/
+
+#moreMenu{
+  position: absolute;
+  float: left;
+  width: 30vw;
+  height: 35vw;
+  background-color: white;
+  margin-left: 69vw;
+  display: none;
+  z-index: 1000;
+}
+
+.moreMenuOption{
+  width: 100%;
+  height: 50%;
+  padding-left: 10%;
+  font-size: 5vw;
+  color: black;
+  padding-top: 4vw;
+}
+
+#more{
+  margin-left: 1%;
+  width: 4%;
+  height: 100%;
+  float: left;
+}
+
+#company{
+  float: left;
+}
+
+#back{
+  float: left;
+}
+
+#notification{
+  float: left;
+}
+#test{
+  float: left;
+}
+
+#profile{
+  margin-left: 33%;
+  float: left;
+}
+
+.menubarBigIconDiv{
+  width: 12%;
+  height: 100%;
+}
+
+.menuBarIcon{
+  padding: 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.pageTitle{
+  background-color: rgb(235, 235, 235);
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 5vw;
+  padding: 2%;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}

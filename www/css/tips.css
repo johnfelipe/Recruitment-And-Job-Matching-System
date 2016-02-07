@@ -1,0 +1,23 @@
+.words{
+  margin-top: 2%;
+  padding: 5%;
+}
+
+.boldSection{
+  font-weight: bolder;
+  margin-bottom: 2%;
+}
+
+.normalText{
+  margin-bottom: 5%;
+}
+
+.bannerImage{
+  width: 100%;
+  height: 20%;
+}
+
+.tipsBannerImage{
+  width: 100%;
+  height: 100%;
+}

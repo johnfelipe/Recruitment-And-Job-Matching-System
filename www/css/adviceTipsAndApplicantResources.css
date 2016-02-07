@@ -1,0 +1,85 @@
+.imageWithDescription{
+  width: 90%;
+  height: 45vw;
+  margin: 5%;
+  float: left;
+  border: 1px solid black;
+  color: black;
+}
+
+a{
+  color: black;
+}
+
+.image{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.description{
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 5%;
+}
+
+.title{
+  font-size: 3vw;
+  font-weight: bold;
+  float: left;
+}
+
+.sypnosis{
+  margin-top: 15%;
+  font-size: 2.6vw;
+  float: left;
+}
+
+.whiteArrowLeft{
+  float: left;
+  margin-left: 42vw;
+  margin-top: 5%;
+}
+
+.whiteArrowRight{
+  float: left;
+  margin-top: 5%;
+  margin-left: -1%;
+}
+
+
+.whiteArrowLeftImage{
+  width: 100%;
+  height: 100%;
+}
+
+.whiteArrowRightImage{
+  width: 100%;
+  height: 100%;
+}
+
+#tip1{
+  background-image: url('../images/companyProfile/adviceAndTips/tips1.png');
+  background-size: 100% 100%;
+}
+
+#tip2{
+  background-image: url('../images/companyProfile/adviceAndTips/tips2.png');
+  background-size: 100% 100%;
+}
+
+#applicantResources1{
+  background-image: url('../images/companyProfile/applicantResources/applicantResources1.png');
+  background-size: 100% 100%;
+}
+
+#applicantResources2{
+  background-image: url('../images/companyProfile/applicantResources/applicantResources2.png');
+  background-size: 100% 100%;
+}
+
+#applicantResources3{
+  background-image: url('../images/companyProfile/applicantResources/applicantResources3.png');
+  background-size: 100% 100%;
+}

@@ -1,0 +1,71 @@
+.programArea{
+  height: 100%;
+  width: 47%;
+  background-size: 100% 100%;
+  float: left;
+  margin-top: 2%;
+  text-align: left;
+  vertical-align: middle;
+  color: white;
+  height: 30vw;
+}
+
+.left{
+  margin-left: 2%;
+}
+
+
+#admin{
+  background-image: url('../images/companyProfile/explore/administrationAndSupportServices.png');
+  font-size: 7vw;
+}
+#autoFinance{
+  background-image: url('../images/companyProfile/explore/autoFinance.png');
+  font-size: 7vw;
+}
+#businessBanking{
+  background-image: url('../images/companyProfile/explore/businessBanking.png');
+  font-size: 7vw;
+}
+#commercialSolutions{
+  background-image: url('../images/companyProfile/explore/commercialSolutions.png');
+  font-size: 7vw;
+}
+#wealthManagement{
+  background-image: url('../images/companyProfile/explore/wealthManagement.png');
+  font-size: 7vw;
+}
+#audit{
+  font-size: 7vw;
+}
+#finance{
+  font-size: 7vw;
+}
+#operations{
+  font-size: 7vw;
+}
+#technology{
+  font-size: 7vw;
+}
+#legal{
+  font-size: 7vw;
+}
+#investmentManagement{
+  font-size: 7vw;
+}
+
+
+.search{
+  height: 40%;
+  margin-top: 3%;
+  margin-left: 10%;
+  width: 80%;
+  border: 1px solid black;
+  outline: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  float:left;
+}

@@ -1,0 +1,54 @@
+#explore{
+  width: 100%;
+  height: 30.66%;
+  border-bottom: 7px solid black;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15vw;
+  background-image: url('../images/companyProfile/office.png');
+  background-size: 100% 100%;
+}
+
+p{
+  color: white;
+  display:inline-block;
+  line-height: 150%;
+  font-weight: bold;
+}
+
+#applicantResources{
+  width: 50%;
+  height: 30.66%;
+  float: left;
+  border-bottom: 7px solid black;
+  border-right: 7px solid black;
+  font-size: 8vw;
+  padding: 5%;
+  background-image: url('../images/companyProfile/applicant.png');
+  background-size: 100% 100%;
+}
+
+#adviceAndTips{
+  width: 50%;
+  height: 30.66%;
+  float: left;
+  border-bottom: 7px solid black;
+  padding: 5%;
+  font-size: 8vw;
+  background-image: url('../images/companyProfile/advice2.png');
+  background-size: 100% 100%;
+}
+
+#browse{
+  width: 100%;
+  height: 30.66%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15vw;
+  background-image: url('../images/companyProfile/city.png');
+  background-size: 100% 100%;
+}
+
+.clear {
+  clear: both;
+}

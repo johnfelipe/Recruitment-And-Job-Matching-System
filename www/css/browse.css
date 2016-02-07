@@ -1,0 +1,340 @@
+#searchBar{
+  width: 100%;
+  height: 5%;
+  background-color: rgb(235, 235, 235);
+  border-top: 7px solid black;
+}
+
+
+#type{
+  width: 7%;
+  height: 100%;
+  text-align: center;
+  margin-left: 3%;
+  font-size: 3vw;
+  float: left;
+}
+#location{
+  width: 12%;
+  height: 100%;
+  text-align: center;
+  margin-left: 3%;
+  font-size: 3vw;
+  float: left;
+}
+
+#level{
+  width: 12%;
+  height: 100%;
+  text-align: center;
+  margin-left: 3%;
+  font-size: 3vw;
+  float: left;
+}
+
+#programAreas{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  margin-left: 3%;
+  font-size: 3vw;
+  float: left;
+}
+
+.arrowDiv{
+  height: 100%;
+  width:7%;
+  float: left;
+}
+
+.arrow{
+  width: 100%;
+  height: 100%;
+}
+
+#moreIconImage{
+  width: 100%;
+  height: 100%;
+}
+
+#more{
+  height: 100%;
+  width: 4%;
+  float: left;
+  margin-left: 2%;
+}
+
+#searchPanelType{
+  position: absolute;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: auto;
+  display: none;
+  background-color: rgba(156, 163, 24, 0.14);
+}
+
+#searchPanelLevel{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: none;
+  background-color: rgba(156, 163, 24, 0.14);
+}
+
+#searchPanelLocation{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  display: none;
+  float: left;
+}
+
+#locationOption{
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  float: left;
+  /*display: none;*/
+  background-color: rgba(156, 163, 24, 0.14);
+}
+
+#radiusOption{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  float: left;
+  display: none;
+  font-size: 3vw;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgba(156, 163, 24, 0.14);
+}
+
+#locationPreferencesOption{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  float: left;
+  display: none;
+  background-color: pink;
+}
+
+#distanceSlider{
+  margin-left: 5%;
+  width: 30%;
+  height: 10%;
+}
+
+
+#searchPanelProgramArea{
+  position: absolute;
+  width: 100%;
+  display: none;
+  background-color: rgba(156, 163, 24, 0.14);
+}
+
+#ajaxSearch{
+  position: absolute;
+  width: 100%;
+  height: 7%;
+  display: none;
+  background-color: grey;
+}
+
+td{
+  vertical-align:top;
+  text-align: left;
+  font-size: 2.5vw;
+}
+
+.searchPanelTable{
+  padding: 5%;
+  width: 100%;
+}
+
+.fourColumnTable2{
+  width: 40%;
+}
+
+.fourColumnTable1{
+  width: 5%;
+}
+
+.fourColumnTable4{
+  width: 40%;
+}
+
+.fourColumnTable3{
+  width: 5%;
+}
+
+.checkbox{
+  border: 3px solid black;
+  height: 30%;
+  width: 90%;
+}
+
+.sixColumnTable1{
+  width: 5%;
+}
+.sixColumnTable2{
+  width: 25%;
+}
+.sixColumnTable3{
+  width: 5%;
+}
+.sixColumnTable4{
+  width: 25%;
+}
+.sixColumnTable5{
+  width: 5%;
+}
+.sixColumnTable6{
+  width: 25%;
+}
+#radio{
+  margin-top: 5%;
+}
+#radio1Label{
+  font-size: 3vw;
+}
+#radio2Label{
+  font-size: 3vw;
+  margin-left: 5%;
+}
+#radio3Label{
+  font-size: 3vw;
+  margin-left: 5%;
+}
+#europeanCountries{
+  display: none;
+}
+#asianPacificCountries{
+  display: none;
+}
+#northAmericanCountries{
+  display: none;
+}
+
+.locationTable{
+  background-color: rgba(156, 163, 24, 0.14);
+}
+.search{
+  height: 40%;
+  margin-top: 3%;
+  margin-left: 10%;
+  width: 80%;
+  border: 1px solid black;
+  outline: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  float:left;
+}
+
+#programs{
+  width: 100%;
+  height: 100%;
+}
+
+.program{
+  width: 44vw;
+  height: auto;
+  margin: 3vw;
+  background-color: rgba(249, 230, 213, 0.06);
+  float: left;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.jobTypeColour{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 44vw;
+  height: 2vw;
+  background-color: red;
+  float: left;
+}
+
+.programThumbnailMain{
+  width: 44vw;
+  height: auto;
+  padding: 5vw;
+  float: left;
+}
+
+.programType{
+  font-size: 2.5vw;
+  float: left;
+}
+
+.programTitle{
+  font-size: 3vw;
+  float: left;
+  color: red;
+  width: 100%;
+  height: 12vw;
+  overflow:hidden;
+}
+
+.jobIcon{
+  float: left;
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-left: 36vw;
+  margin-top: 2vw;
+  position: absolute;
+}
+
+.jobIconImage{
+  width: 100%;
+  height: 100%;
+}
+
+.programHeading{
+  font-size: 2vw;
+}
+
+.programInformation{
+  font-size: 2.5vw;
+}
+
+.programLocation{
+  width: 100%;
+  height: 3vw; /* Change to height auto and overflow: visible*/
+  overflow:hidden;
+}
+
+.division{
+  width: 100%;
+  height: 3vw; /* Change to height auto and overflow: visible*/
+  overflow:hidden;
+}
+
+.snippet{
+  display: none;
+}
+
+.programHeading{
+  width: 100%;
+  height: 3vw; /* Change to height auto and overflow: visible*/
+  overflow:hidden;
+}
+
+.arrowIcon{
+  width: 4vw;
+  height: 4vw;
+  margin-left: 15vw;
+}
+
+.arrowIconImage{
+  width: 100%;
+  height: 100%;
+}

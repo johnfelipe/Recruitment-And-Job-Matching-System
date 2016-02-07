@@ -1,0 +1,66 @@
+.businessAreaDescription{
+  padding: 5%;
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  border-bottom: 7px solid black;
+  font-size: 3.3vw;
+  margin-bottom: 5%;
+}
+
+.profile{
+  height: auto;
+  background-size: 100% 100%;
+}
+
+#profile1{
+  width: 50vw;
+  height: 60vw;
+  background-image: url('../images/companyProfile/explore/profile1.png');
+  background-repeat: no-repeat;
+}
+
+#profile2{
+  width: 50vw;
+  height: 60vw;
+  background-image: url('../images/companyProfile/explore/profile2.png');
+  background-repeat: no-repeat;
+}
+
+.latestOpenings{
+  border-top: 7px solid black;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  padding-bottom: 0.5%;
+}
+
+.latestOpeningsTitle{
+  text-align: center;
+  font-size: 4vw;
+}
+
+
+.profiles{
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.profileTitle{
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 2.2vw;
+  font-weight: bold;
+}
+
+.profileName{
+  width: 30%;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 4vw;
+}
+
+.position{
+  width: 40%;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 3vw;
+}

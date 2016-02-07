@@ -1,0 +1,11 @@
+#hobbiesEditTextArea{
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 30%;
+  width: 96%;
+  resize:vertical ;
+}
+
+#displayCharacterCount{
+  margin-left: 2%;
+}

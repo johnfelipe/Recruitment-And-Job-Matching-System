@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <link rel="stylesheet" type="text/css" href="css/menubar.css">
+  <link rel="stylesheet" type="text/css" href="css/browse.css">
+  <link rel="stylesheet" type="text/css" href="css/adviceTipsAndApplicantResources.css">
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/header.js"></script>
+  <script type="text/javascript" src="js/browse.js"></script>
+  <script type="text/javascript" src="js/loadProgram.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+  <script src="js/jquery.geocomplete.min.js"></script>
+  <title>Browse</title>
+</head>
+<body>
+
+  <div id="header2">
+    <div id="back" class="menubarBigIconDiv"><img src="images/back.png" alt="Back" id="backIcon" class="menuBarIcon"></div>
+    <a href="profile.html"><div id="profile" class="menubarBigIconDiv"><img src="images/header/profile.png" alt="Profile" id="profileIcon" class="menuBarIcon"></div></a>
+    <a href="notifications.html"><div id="notification" class="menubarBigIconDiv"><img src="images/header/notification.png" alt="Notification" id="notificationIcon" class="menuBarIcon"></div></a>
+    <a href="companyProfile.html"><div id="company" class="menubarBigIconDiv"><img src="images/header/company.png" alt="Company" id="companyIcon" class="menuBarIcon" class="menuBarIcon"></div></a>
+    <a href="test.html"><div id="test" class="menubarBigIconDiv"><img src="images/header/test.png" alt="Test" id="testIcon" class="menuBarIcon"></div></a>
+    <div id="more" class="menubarBigIconDiv"><img src="images/header/more.png" alt="More" id="moreIcon" class="menuBarIcon"></div>
+  </div>
+
+  <div id="moreMenu">
+    <a href="settings.html"><div id="settings" class="moreMenuOption">Settings</div></a>
+    <a href="help.html"><div id="help" class="moreMenuOption">Help</div></a>
+  </div>
+
+  <div class="pageTitle">
+    Browse
+  </div>
+
+  <div id ="searchBar">
+    <div id="type">
+      Type
+    </div>
+    <div class= "arrowDiv" id="typeArrow">
+      <img src="images/companyProfile/applicantResources/rightArrow.png" alt="Right Arrow" class="arrow" id="typeArrowImage">
+    </div>
+
+    <div id="level">
+      Level
+    </div>
+    <div class= "arrowDiv" id="levelArrow">
+      <img src="images/companyProfile/applicantResources/rightArrow.png" alt="Right Arrow" class="arrow" id="levelArrowImage">
+    </div>
+
+    <div id="location">
+      Location
+    </div>
+    <div class= "arrowDiv" id="locationArrow">
+      <img src="images/companyProfile/applicantResources/rightArrow.png" alt="Right Arrow" class="arrow" id="locationArrowImage">
+    </div>
+
+    <div id="programAreas">
+      Program Area
+    </div>
+    <div class= "arrowDiv" id="programAreasArrow">
+      <img src="images/companyProfile/applicantResources/rightArrow.png" alt="Right Arrow" class="arrow" id="programAreasArrowImage">
+    </div>
+    <div id= "more">
+      <img src="images/companyProfile/browse/more.png" alt="More" id="moreIconImage">
+    </div>
+  </div>
+
+
+  <div id="searchPanelType" class="searchPanel">
+    <table class="searchPanelTable">
+      <tr>
+        <td class="fourColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="fourColumnTable2">Internship</td>
+        <td class="fourColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="fourColumnTable4">Graduate Position</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="searchPanelLevel" class="searchPanel">
+    <table class="searchPanelTable">
+      <tr>
+        <td class="fourColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="fourColumnTable2">Undergraduate</td>
+        <td class="fourColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="fourColumnTable4">Graduate</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="searchPanelLocation" class="searchPanel">
+
+    <div id="radio">
+      <input type="radio" id="radio1" name="radio" onChange="locationPreference();">
+      <label for="radio1" id="radio1Label">Location Preferences</label>
+      <input type="radio" id="radio2" name="radio" onChange="radius();">
+      <label for="radio2" id="radio2Label">Radius</label>
+      <input type="radio" id="radio3" name="radio" onChange="locationn();" checked="checked">
+      <label for="radio3" id="radio3Label">Location</label>
+    </div>
+
+    <div id="locationOption" class="locationPanel">
+      <table class="searchPanelTable">
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox" id="americas">&nbsp;</div></td>
+          <td class="sixColumnTable2">Americas</td>
+          <td class="sixColumnTable3"><div class="checkbox" id="asiaPacific">&nbsp;</div></td>
+          <td class="sixColumnTable4">Asia Pacific</td>
+          <td class="sixColumnTable5"><div class="checkbox" id="europe">&nbsp;</div></td>
+          <td class="sixColumnTable6">Europe, Middle East and Africa</td>
+        </tr>
+      </table>
+
+      <table class="searchPanelTable locationTable" id="europeanCountries">
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Bahrain</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Belgium</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">France</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Germany</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Israel</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">Italy</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Poland</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Russia</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">Spain</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Sweden</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Switzerland</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">Turkey</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">United Arab Emirates</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">United Kingdom</td>
+        </tr>
+      </table>
+
+      <table class="searchPanelTable locationTable" id="asianPacificCountries">
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">China</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Hong Kong</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">India</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Indonesia</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Japan</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">Malaysia</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Philippines</td>
+          <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable4">Singapore</td>
+          <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable6">South Korea</td>
+        </tr>
+        <tr>
+          <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="sixColumnTable2">Taiwan</td>
+        </tr>
+      </table>
+
+      <table class="searchPanelTable locationTable" id="northAmericanCountries">
+        <tr>
+          <td class="fourColumnTable1"><div class="checkbox">&nbsp;</div></td>
+          <td class="fourColumnTable2">America</td>
+          <td class="fourColumnTable3"><div class="checkbox">&nbsp;</div></td>
+          <td class="fourColumnTable4">Canada</td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div id="radiusOption" class="locationPanel">
+      <input id="distanceSlider" type="range" name="points" min="0" max="10" oninput="showVal(this.value)" onchange="showVal(this.value)"> Within <span id="distance">20</span> Miles of
+      <input id="geocomplete" placeholder="Type in an address" />
+    </div>
+  </div>
+
+  <div id="searchPanelProgramArea" class="searchPanel">
+    <table class="searchPanelTable">
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Administrative &amp Support Services</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Audit</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Auto Finance</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Business Banking</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Card Services</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Chase Commerce Services</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Chase Wealth Management</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Commercial Term Lending</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Community Development Banking</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Consumer Banking</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Corporate Banking</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Corporate Client Banking &amp Specialized Industries</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Corporate Real Estate &amp General Services</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Corporate Responsibility</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Credit Markets &amp Treasury</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Digital</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Finance</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Global Investment Management</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Global Knowledge Network</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Global Wealth Management</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Human Resources</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">International Banking</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Investment Banking</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Investor Services</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Legal</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Marketing &amp Communications</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Middle Market Banking &amp Specialized Industries</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Mortgage Banking</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Operations</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Product Management</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Public Finance</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Quantitative Research</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Real Estate Banking</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Risk Management</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Sales, Trading &amp Research</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Strategy</td>
+      </tr>
+
+      <tr>
+        <td class="sixColumnTable1"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable2">Technology</td>
+        <td class="sixColumnTable3"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable4">Treasury &amp Chief Investment Office</td>
+        <td class="sixColumnTable5"><div class="checkbox">&nbsp;</div></td>
+        <td class="sixColumnTable6">Treasury Services and Trade</td>
+      </tr>
+
+    </table>
+  </div>
+  <div id="ajaxSearch" class="searchPanel">
+    <input id="myInput" class="textbox search" >
+    <!-- <input type="search" class="textbox search"> -->
+  </div>
+  <div id="programs">
+    <!-- <div class="program">
+      <div class="jobTypeColour"></div>
+      <div class="clear"></div>
+      <div class="jobIcon"><img src="images/companyProfile/browse/jobIcon.png" alt="Job Icon" class="jobIconImage"></div>
+      <div class="programThumbnailMain">
+        <div class="programType">Internship</div>
+        <div class="programTitle">Global Knowledge Network Analyst Program</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Level</div>
+        <div class="programInformation">Undergraduate</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Division</div>
+        <div class="programInformation division">Global Knowledge Network Global Knowledge Network Global Knowledge Network</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Location</div>
+        <div class="programInformation programLocation">London, Budapest, New York, London, Budapest, New York, London, Budapest, New York</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Deadline</div>
+        <div class="programInformation">March 13, 2016</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programInformation snippet">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="clear"></div>
+        <div class="arrowIcon"><img src="images/companyProfile/applicantResources/downArrow.png" alt="Down Arrow" class="arrowIconImage"></div>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="jobTypeColour"></div>
+      <div class="clear"></div>
+      <div class="jobIcon"><img src="images/companyProfile/browse/jobIcon.png" alt="Job Icon" class="jobIconImage"></div>
+      <div class="programThumbnailMain">
+        <div class="programType">Internship</div>
+        <div class="programTitle">Global Knowledge Network Analyst Program</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Level</div>
+        <div class="programInformation">Undergraduate</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Division</div>
+        <div class="programInformation division">Global Knowledge Network Global Knowledge Network Global Knowledge Network</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Location</div>
+        <div class="programInformation programLocation">London, Budapest, New York, London, Budapest, New York, London, Budapest, New York</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Deadline</div>
+        <div class="programInformation">March 13, 2016</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programInformation snippet">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="clear"></div>
+        <div class="arrowIcon"><img src="images/companyProfile/applicantResources/downArrow.png" alt="Down Arrow" class="arrowIconImage"></div>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="jobTypeColour"></div>
+      <div class="clear"></div>
+      <div class="jobIcon"><img src="images/companyProfile/browse/jobIcon.png" alt="Job Icon" class="jobIconImage"></div>
+      <div class="programThumbnailMain">
+        <div class="programType">Internship</div>
+        <div class="programTitle">Global Knowledge Network Analyst Program</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Level</div>
+        <div class="programInformation">Undergraduate</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Division</div>
+        <div class="programInformation division">Global Knowledge Network Global Knowledge Network Global Knowledge Network</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Location</div>
+        <div class="programInformation programLocation">London, Budapest, New York, London, Budapest, New York, London, Budapest, New York</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Deadline</div>
+        <div class="programInformation">March 13, 2016</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programInformation snippet">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="clear"></div>
+        <div class="arrowIcon"><img src="images/companyProfile/applicantResources/downArrow.png" alt="Down Arrow" class="arrowIconImage"></div>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="jobTypeColour"></div>
+      <div class="clear"></div>
+      <div class="jobIcon"><img src="images/companyProfile/browse/jobIcon.png" alt="Job Icon" class="jobIconImage"></div>
+      <div class="programThumbnailMain">
+        <div class="programType">Internship</div>
+        <div class="programTitle">Global Knowledge Network Analyst Program</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Level</div>
+        <div class="programInformation">Undergraduate</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Division</div>
+        <div class="programInformation division">Global Knowledge Network Global Knowledge Network Global Knowledge Network</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Location</div>
+        <div class="programInformation programLocation">London, Budapest, New York, London, Budapest, New York, London, Budapest, New York</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Deadline</div>
+        <div class="programInformation">March 13, 2016</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programInformation snippet">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="clear"></div>
+        <div class="arrowIcon"><img src="images/companyProfile/applicantResources/downArrow.png" alt="Down Arrow" class="arrowIconImage"></div>
+      </div>
+    </div> -->
+
+    <div class="program">
+      <div class="hidden programReference">REF123123</div> <!-- Reference Number -->
+      <div class="jobTypeColour"></div>
+      <div class="clear"></div>
+      <div class="jobIcon"><img src="images/companyProfile/browse/jobIcon.png" alt="Job Icon" class="jobIconImage"></div>
+      <div class="programThumbnailMain">
+        <div class="programType">Internship</div>
+        <div class="programTitle">Global Knowledge Network Analyst Program</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Level</div>
+        <div class="programInformation">Undergraduate</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Division</div>
+        <div class="programInformation division">Global Knowledge Network Global Knowledge Network Global Knowledge Network</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Location</div>
+        <div class="programInformation programLocation">London, Budapest, New York, London, Budapest, New York, London, Budapest, New York</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Deadline</div>
+        <div class="programInformation">March 13, 2016</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programInformation snippet">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="clear"></div>
+        <div class="arrowIcon"><img src="images/companyProfile/applicantResources/downArrow.png" alt="Down Arrow" class="arrowIconImage"></div>
+      </div>
+    </div>
+
+    <!-- <div class="program">
+      <div class="jobTypeColour"></div>
+      <div class="clear"></div>
+      <div class="jobIcon"><img src="images/companyProfile/browse/jobIcon.png" alt="Job Icon" class="jobIconImage"></div>
+      <div class="programThumbnailMain">
+        <div class="programType">Internship</div>
+        <div class="programTitle">Global Knowledge Network Analyst Program</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Level</div>
+        <div class="programInformation">Undergraduate</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Division</div>
+        <div class="programInformation division">Global Knowledge Network Global Knowledge Network Global Knowledge Network</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Location</div>
+        <div class="programInformation programLocation">London, Budapest, New York, London, Budapest, New York, London, Budapest, New York</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programHeading">Deadline</div>
+        <div class="programInformation">March 13, 2016</div>
+        <div class="clear"></div>
+        <hr>
+        <div class="programInformation snippet">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="clear"></div>
+        <div class="arrowIcon"><img src="images/companyProfile/applicantResources/downArrow.png" alt="Down Arrow" class="arrowIconImage"></div>
+      </div>
+    </div> -->
+    <div class="clear"></div>
+  </div>
+</body>
+<script type = "text/javascript">illuminateCompanyIcon()</script>
+</html>

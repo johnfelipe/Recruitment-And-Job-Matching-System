@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/menubar.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/header.js"></script>
+  <!-- <script type="text/javascript" src="js/profile.js"></script> -->
+  <title>Profile</title>
+</head>
+<body>
+  <!-- <div id="header"></div> -->
+  <div id="header2">
+    <div id="back" class="menubarBigIconDiv"><img src="images/back.png" alt="Back" id="backIcon" class="menuBarIcon"></div>
+    <a href="profile.html"><div id="profile" class="menubarBigIconDiv"><img src="images/header/profile.png" alt="Profile" id="profileIcon" class="menuBarIcon"></div></a>
+    <a href="notifications.html"><div id="notification" class="menubarBigIconDiv"><img src="images/header/notification.png" alt="Notification" id="notificationIcon" class="menuBarIcon"></div></a>
+    <a href="companyProfile.html"><div id="company" class="menubarBigIconDiv"><img src="images/header/company.png" alt="Company" id="companyIcon" class="menuBarIcon" class="menuBarIcon"></div></a>
+    <a href="test.html"><div id="test" class="menubarBigIconDiv"><img src="images/header/test.png" alt="Test" id="testIcon" class="menuBarIcon"></div></a>
+    <div id="more" class="menubarBigIconDiv"><img src="images/header/more.png" alt="More" id="moreIcon" class="menuBarIcon"></div>
+  </div>
+
+  <div id="moreMenu">
+    <a href="settings.html"><div id="settings" class="moreMenuOption">Settings</div></a>
+    <a href="help.html"><div id="help" class="moreMenuOption">Help</div></a>
+  </div>
+
+  <div id="profileIntroSection">
+    <div id="profilePicture"><img src="images/profile/profilePicturePlaceholder.png" alt="Profile Picture" id="profilePictureImage" ></div>
+    <a href="editProfileSummarySection.html">
+      <div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+      <div class="clear"></div>
+      <div id="name">Liam Diamond</div>
+      <div id="university">Student at <span id="universityName">University of Placeholder</span></div>
+      <div id="location">Glasgow, United Kingdom</div>
+      <div class="clear"></div>
+      <div id=""></div>
+    </div>
+
+    <div id="profileSummarySection">
+      <div class="sectionTitle">Summary</div>
+      <a href="profileHobbiesEdit.html">
+        <div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+        <div class="clear"></div>
+
+        <div id="summary" class="descriptionBox">
+          Nulla pretium tellus neque, vel convallis massa feugiat eget. Nunc ultrices varius lectus vel eleifend.
+          Cras convallis eros erat, nec pellentesque elit condimentum vel. Vivamus sed massa enim. Duis lorem
+          nibh, lobortis non eros tristique, hendrerit imperdiet elit.
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="contactInformationSection">
+        <div class="sectionTitle">Contact Information</div>
+        <a href="editProfileContact.html">
+          <div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+          <table id="contactInfoTbl" cellspacing="0" class="no-spacing style="border-spacing: 0;"">
+            <tr>
+              <td  class="column1">Email Address</td>
+              <td class="column2" id="email">liam@hotmail.co.uk</td>
+            </tr>
+            <tr>
+              <td class="column1">Telephone Number</td>
+              <td class="column2" id="telephoneNumber">0239043242</td>
+            </tr>
+            <tr>
+              <td class="column1">Address</td>
+              <td class="column2" id="address">19 Priory Wynd, Kilwinning</td>
+            </tr>
+          </table>
+          <div class="clear"></div>
+        </div>
+
+
+        <div id="profileEducationSection">
+          <div class="clear"></div>
+          <div class="sectionTitle">Education</div>
+          <a href="editProfileEduction.html">
+            <div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+            <div class="clear"></div>
+
+            <div id="educationEstablishment">
+              <div id="uniIcon" class="universityIcon"><img src="images/profile/universityPicturePlaceholder.png" alt="University Icon" class="universityIconImage" ></div>
+              <div id="uniName" class="establishmentName">University of Placeholder</div>
+              <div class="degree"><span id ="degreeType">MEng</span> <span id ="degreeType">Computer Science</span></div>
+              <div class="expectedDegree">Expected: <span id="expectedResult">2:1</span></div>
+              <div class="startAndGraduation"><span id="startYear">2012</span>-<span id="graduationYear">2017</div>
+                <div id="classes">
+                  <table class="gradeTable" id="grades" cellpadding=0 cellspacing=0>
+                    <tr>
+                      <td class="classColumn">CS310CS310CS310CS310CS310</td>
+                      <td class="gradeColumn">90%</td>
+                    </tr>
+                    <tr>
+                      <td class="classColumn">CS314</td>
+                      <td class="gradeColumn">88%</td>
+                    </tr>
+                    <tr>
+                      <td class="classColumn">CS304</td>
+                      <td class="gradeColumn">82%</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="educationDescription">
+                  Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur.</div>
+                </div>
+              </div>
+
+              <div id="profileSkillsSection" class="profileSection">
+                <div class="sectionTitle">Skills</div>
+                <a href="profileSkillsEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <div class="clear"></div>
+                <div id="technicalSkills">
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <p class="skill">Java</p>
+                  <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+              </div>
+
+              <div id="profileWorkHistory" class="profileSection">
+                <div class="sectionTitle">Work History</div>
+                <a href="profileWorkHistoryEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <div class="clear"></div>
+
+                <div class="employment">
+                  <div class="organisation">Tesco</div>
+                  <div class="jobTitle">Sales Assistant</div>
+                  <div class="jobLocation">Glasgow, United Kingdom</div>
+                  <div class="jobStartDate">Sept 2015  -</div>
+                  <div class="jobStartDate">Jan 2016</div>
+                  <div class="clear"></div>
+                  <div class="descriptionBox2">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div id="profileProjects" class="profileSection">
+                <div class="sectionTitle">Projects</div>
+                <a href="profileProjectsEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <div class="clear"></div>
+
+                <div class="project">
+                  <div class="projectName">CS413 Embedded Systems Project</div>
+                  <div class="projectStart">Sept 2015  -</div>
+                  <div class="projectEnd">Jan 2016</div>
+                  <div class="clear"></div>
+                  <div class="descriptionBox2">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                  </div>
+                </div>
+              </div>
+
+              <div id="profileAwards" class="profileSection">
+                <div class="sectionTitle">Awards &amp Achievements</div>
+                <a href="profileAwardsEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <div class="clear"></div>
+                <div class="award">
+                  <div class="awardTitle">Community Involvement Award</div>
+                  <div class="issuer">Awarded by: SQA, Aug 2012</div>
+                  <div class="descriptionBox2">
+                    Wa hava laasad trenzsa gwo producgs su IdfoBraid, yop quiel geg ba solaly rasponsubla rof trenzur
+                    sala ent dusgrubuguon. Offoctivo immoriatoly, hawrgasi pwicos asi sirucor.Thas sirutciun applios
+                    tyu thuso itoms ghuso pwicos gosi sirucor in
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+
+              <div id="profileLanguage" class="profileSection">
+                <div class="sectionTitle">Languages</div>
+                <a href="profileLanguageEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <table class="languageTable" id="grades" cellpadding=0 cellspacing=0>
+                  <tr>
+                    <td class="column1Language">English</td>
+                    <td class="column2Language">Mother Tongue</td>
+                  </tr>
+                  <tr>
+                    <td class="column1Language">Spanish</td>
+                    <td class="column2Language">Business Proficiency</td>
+                  </tr>
+                  <tr>
+                    <td class="column1Language">German</td>
+                    <td class="column2Language">Intermediate</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="profileHobbies">
+                <div class="sectionTitle">Hobbies &amp Interests</div>
+                <a href="profileHobbiesEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <div class="clear"></div>
+
+                <div id="hobbiesAndInterests" class="descriptionBox">
+                  During my spare time I enjoy relaxing and going out with family and friends. I also enjoy cooking,
+                  listening to music and keeping up with current affairs. Furthermore, I have a keen interest in travel and
+                  have visited several countries within European and South East Asia.
+                </div>
+              </div>
+
+              <div id="additionalInformationSection">
+                <div class="sectionTitle">Additional Information</div>
+                <a href="profileHobbiesEdit.html"><div class="edit"><img src="images/profile/edit.png" alt="Edit" class="editIconImage" ></div></a>
+                <div class="clear"></div>
+
+                <div id="additionalInformation" class="descriptionBox">
+                  Aliquam tempus, massa vitae tempor semper, nibh diam ultricies purus, a ornare enim mi eget felis.
+                  Cras tristique viverra faucibus. Nunc ac dapibus est. Sed condimentum sit amet magna id ultricies.
+                </div>
+              </div>
+
+
+
+            </body>
+            <script type = "text/javascript">illuminateProfileIcon()</script>
+            </html>

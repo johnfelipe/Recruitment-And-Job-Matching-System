@@ -1,0 +1,36 @@
+.qAndA{
+  padding: 5%;
+}
+
+.q{
+  font-weight: bolder;
+  margin-bottom: 10%;
+  font-size: 3.5vw;
+}
+
+.a{
+  padding-bottom: 10%;
+  font-size: 3vw;
+}
+
+.profileBannerName{
+  float: left;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: 10vw;
+}
+
+.profileBannerPosition{
+  float: left;
+  margin-left: 5%;
+  font-size: 4vw;
+  width: 45vw;
+  color: white;
+}
+
+.profileBannerProfile{
+  float: left;
+  width: 100%;
+  height: 25%;
+  background-size: 100% 100%;
+}

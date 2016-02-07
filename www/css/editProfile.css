@@ -1,0 +1,82 @@
+.clear {
+  clear: both;
+}
+
+#main{
+  height: auto;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+#main p {
+  font-family: sans-serif;
+}
+
+#title{
+  margin-left: 20%;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+}
+
+#backIcon{
+  float: left;
+  width: 10%;
+  height: 2%;
+}
+
+#backIconImage{
+  width: 100%;
+  height: 100%;
+}
+
+#informationBox{
+  margin-left: 2%;
+  margin-right: 2%;
+  height: auto;
+  border: 1px solid black;
+  background-color: rgb(191, 216, 255);
+  padding: 3%;
+  margin-bottom: 5%;
+}
+
+.editButtons{
+  margin-top: 10%;
+  float: left;
+  background-color: rgba(0, 33, 117, 0.46);
+  width: 25%;
+}
+
+.editSave{
+  margin-left: 2%;
+}
+
+.editCancel{
+  margin-left: 10%;
+}
+
+.editProfileTable{
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%;
+  float: left;
+  border-collapse: collapse;
+  border-spacing:0; /* Removes the cell spacing via CSS */
+  border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+}
+
+td{
+  vertical-align:top;
+}
+.clm1{
+  white-space:nowrap;
+}
+.clm2{
+
+}
+
+table.no-spacing {
+  padding: 0%;
+  border-spacing:0%; /* Removes the cell spacing via CSS */
+  border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+}
